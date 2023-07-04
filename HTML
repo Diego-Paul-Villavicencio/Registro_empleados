@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Registro de Empleados</title>
+</head>
+<body>
+    <h1>Registro de acceso de personal administrativo</h1>
+
+    <button id="entradaBtn">REGISTRAR ENTRADA</button>
+    <button id="salidaBtn">REGISTRAR SALIDA</button>
+
+    <div id="registroContainer"></div>
+
+    <script type="text/javascript" src="scripts.js"></script>
+    <script type="text/javascript">
+        document.getElementById("entradaBtn").addEventListener("click", registrarEntrada);
+        document.getElementById("salidaBtn").addEventListener("click", registrarSalida);
+    </script>
+</body>
+</html>
