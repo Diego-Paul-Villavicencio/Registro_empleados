@@ -1,0 +1,32 @@
+const registroContainer = document.getElementById("registroContainer");
+
+function registrarEntrada() {
+  const empleado = prompt("Ingrese el nombre del empleado: ");
+
+  if (empleado) {
+    const fechaHora = new Date().toLocaleString();
+    const registro = `${empleado} - Entrada: ${fechaHora}`;
+    const registroElement = createRegistroElement(registro, "registro_entrada");
+    registroContainer.appendChild(registroElement);
+  }
+}
+
+function registrarSalida() {
+  const empleado = prompt("Ingrese el nombre del empleado: ");
+
+  if (empleado) {
+    const fechaHora = new Date().toLocaleString();
+    const registro = `${empleado} - Salida: ${fechaHora}`;
+    const registroElement = createRegistroElement(registro, "registro_salida");
+    registroContainer.appendChild(registroElement);
+  }
+}
+
+function createRegistroElement(registro, className) {
+  const registroElement = document.createElement("div");
+  registroElement.className = className;
+  registroElement.textContent = registro;
+  return registroElement;
+}
+
+ 
